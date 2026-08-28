@@ -1,0 +1,7 @@
+# VoxCPM-2 Pytorch Türkçe Versiyon - UI
+voxcpm==2.0.3
+torchcodec==0.7.0
+numpy==1.26.4
+gradio>=6,<7
+imageio-ffmpeg>=0.6,<1
+hf-xet>=1.1,<2

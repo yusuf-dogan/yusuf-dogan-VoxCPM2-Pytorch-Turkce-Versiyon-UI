@@ -1,0 +1,55 @@
+__pycache__/
+*.py[cod]
+*.pyd
+
+.venv/
+runtime/
+.install_complete
+
+models/*
+!models/.gitkeep
+
+outputs/*
+!outputs/.gitkeep
+
+logs/*
+!logs/.gitkeep
+
+.cache/
+.huggingface/
+models/.cache/
+models/VoxCPM2/.cache/
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Cache
+.cache/
+cache/
+temp/
+tmp/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Generated files
+outputs/
+output/
