@@ -64,8 +64,6 @@ Model yaklaşık 5 GB'tır. İndirme yarıda kalırsa `install.bat` yeniden çal
 | SAFE KV | 2048 |
 | WAV | PCM 24-bit |
 
-`acve` kelimesi model tarafında otomatik olarak `ac ve` biçimine dönüştürülür; textbox'taki görünür metin değiştirilmez.
-
 ## Kısa kullanım
 
 1. Türkçe metni **Seslendirilecek metin** alanına yapıştırın.
