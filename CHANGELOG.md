@@ -8,7 +8,6 @@
 - Inference Timesteps varsayılanı 12.
 - Son konuşma hızı 1.00.
 - Otomatik yeni Seed açık.
-- `acve -> ac ve` telaffuz düzeltmesi korunuyor.
 - Otomatik MP3 oynatma özelliği yok.
 - Tek tık Windows `install.bat` eklendi.
 - Python 3.11 otomatik bulma/kurma eklendi.
