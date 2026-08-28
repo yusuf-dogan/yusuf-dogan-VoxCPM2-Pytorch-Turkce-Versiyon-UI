@@ -279,17 +279,8 @@ klasörüne yazılır.
 
 Ham/final WAV PCM 24-bit yazılır.
 
-## 9. Türkçe telaffuz düzeltmesi
 
-Model tarafında şu dönüşüm aktiftir:
-
-```text
-acve -> ac ve
-```
-
-Textbox içinde `acve` yazmaya devam edebilirsiniz. Yalnız modele gönderilen metin değiştirilir ve tam kelime eşleşmesi kullanılır.
-
-## 10. Kararlılık özellikleri
+## 9. Kararlılık özellikleri
 
 UI'de aşağıdaki yapı korunmuştur:
 
@@ -311,7 +302,7 @@ UI'de aşağıdaki yapı korunmuştur:
 
 `İşlemi İptal Et`, aktif CUDA `model.generate()` çağrısını zorla öldürmez. Mevcut chunk tamamlandıktan sonra yeni chunk başlatılmaz.
 
-## 11. Sorun giderme
+## 10. Sorun giderme
 
 ### CUDA bulunamadı
 
@@ -353,7 +344,7 @@ install_YYYYAAGG_SSDDSS.log
 
 dosyasını hata bildiriminize ekleyin.
 
-## 12. Temiz kurulum
+## 11. Temiz kurulum
 
 Önemli `outputs` dosyalarınızı yedekleyin.
 
@@ -365,7 +356,7 @@ runtime
 models\VoxCPM2
 ```
 
-## 13. Upstream projeler
+## 12. Upstream projeler
 
 - https://github.com/OpenBMB/VoxCPM
 - https://huggingface.co/openbmb/VoxCPM2
