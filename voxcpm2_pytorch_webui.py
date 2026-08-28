@@ -496,49 +496,6 @@ NATIVE_PASTE_HEAD = r"""
 """
 
 
-
-# ---------------------------------------------------------
-# TELAFFUZ DÜZELTMELERİ
-# ---------------------------------------------------------
-# Text alanındaki görünür metni değiştirmez.
-# Yalnız VoxCPM2'ye gönderilen metne uygulanır.
-PRONUNCIATION_MAP = {
-    "acve": "ac ve",
-}
-
-
-def apply_pronunciation_map(text):
-    """
-    Telaffuz sözlüğünü yalnız tam kelime eşleşmelerinde uygular.
-    Böylece başka kelimelerin içindeki benzer harf dizilerine dokunulmaz.
-    """
-    if not text:
-        return text
-
-    result = text
-
-    for source, target in PRONUNCIATION_MAP.items():
-        pattern = re.compile(
-            rf"(?<!\w){re.escape(source)}(?!\w)",
-            flags=re.IGNORECASE,
-        )
-
-        def repl(match):
-            original = match.group(0)
-
-            if original.isupper():
-                return target.upper()
-
-            if original[:1].isupper():
-                return target[:1].upper() + target[1:]
-
-            return target
-
-        result = pattern.sub(repl, result)
-
-    return result
-
-
 def split_long_piece(piece, max_chars):
     """Split only when a single sentence exceeds the hard maximum."""
     piece = piece.strip()
@@ -833,9 +790,6 @@ def generate(
         if not text:
             raise gr.Error("Metin gir.")
 
-        # Telaffuz düzeltmeleri yalnız modelin okuyacağı metne uygulanır.
-        text = apply_pronunciation_map(text)
-
         if not reference_audio:
             raise gr.Error(
                 "Referans MP3/WAV seç."
@@ -899,7 +853,6 @@ def generate(
             "Public model.generate(): AKTİF",
             "Denoiser: KAPALI",
             "Normalize: KAPALI",
-            "Telaffuz sözlüğü: AKTİF | acve -> ac ve",
             "",
             f"Toplam karakter: {len(text)}",
             f"Chunk sayısı: {len(chunks)}",
